@@ -6,8 +6,7 @@ Public Class Food_Item
     Dim SqlCmd As New MySqlCommand
     Dim SqlRd As MySqlDataReader
     Dim SqlDt As New DataTable
-    Dim DtA As New MySqlDataAdapter
-
+    
     Dim server As String = "localhost"
     Dim username As String = "root"
     Dim password As String = "amey"
