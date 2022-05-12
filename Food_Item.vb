@@ -1,6 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
 
-' hello
 Public Class Food_Item
     Dim SqlConn As New MySqlConnection
     Dim SqlCmd As New MySqlCommand
@@ -105,12 +104,11 @@ Public Class Food_Item
         SqlConn.Open()
 
         SqlCmd.Connection = SqlConn
-        Dim sql As String = "update canteen_management_system.food_items set item_name = '" & txtItemName.Text & "', unit_price = " & Integer.Parse(txtUnitPrice.Text) & ", food_category_no = " & Integer.Parse(txtFoodCategoryNo.Text) & " where item_id = " & Integer.Parse(txtItemId.Text)
+        SqlQuery = "update canteen_management_system.food_items set item_name = '" & txtItemName.Text & "', unit_price = " & Integer.Parse(txtUnitPrice.Text) & ", food_category_no = " & Integer.Parse(txtFoodCategoryNo.Text) & " where item_id = " & Integer.Parse(txtItemId.Text)
 
-        Dim cmd As New MySqlCommand(sql)
-        cmd.Connection = SqlConn
+        SqlCmd = New MySqlCommand(SqlQuery, SqlConn)
 
-        cmd.ExecuteNonQuery()
+        SqlCmd.ExecuteNonQuery()
         SqlConn.Close()
         updateTable()
 
@@ -118,6 +116,7 @@ Public Class Food_Item
 
     Private Sub DataGridView1_cellclick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Try
+            txtItemId.Enabled = False
             txtItemId.Text = DataGridView1.SelectedRows(0).Cells(0).Value.ToString
             txtItemName.Text = DataGridView1.SelectedRows(0).Cells(1).Value.ToString
             txtUnitPrice.Text = DataGridView1.SelectedRows(0).Cells(2).Value.ToString
@@ -143,5 +142,14 @@ Public Class Food_Item
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
+        txtItemId.Enabled = True
+        txtItemId.Text = ""
+        txtItemName.Text = ""
+        txtSearch.Text = ""
+        txtFoodCategoryNo.Text = ""
+        txtUnitPrice.Text = ""
     End Sub
 End Class

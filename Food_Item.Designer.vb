@@ -40,6 +40,7 @@ Partial Class Food_Item
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -146,7 +147,7 @@ Partial Class Food_Item
         Me.btnSubmit.BackColor = System.Drawing.SystemColors.Highlight
         Me.btnSubmit.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnSubmit.Location = New System.Drawing.Point(563, 202)
+        Me.btnSubmit.Location = New System.Drawing.Point(485, 202)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(116, 39)
         Me.btnSubmit.TabIndex = 21
@@ -185,7 +186,7 @@ Partial Class Food_Item
         '
         Me.btnDelete.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btnDelete.Location = New System.Drawing.Point(833, 202)
+        Me.btnDelete.Location = New System.Drawing.Point(727, 202)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(114, 39)
         Me.btnDelete.TabIndex = 25
@@ -196,12 +197,23 @@ Partial Class Food_Item
         '
         Me.btnUpdate.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdate.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btnUpdate.Location = New System.Drawing.Point(698, 202)
+        Me.btnUpdate.Location = New System.Drawing.Point(607, 202)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(114, 39)
         Me.btnUpdate.TabIndex = 26
         Me.btnUpdate.Text = "Update"
         Me.btnUpdate.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Button1.Location = New System.Drawing.Point(847, 202)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(114, 39)
+        Me.Button1.TabIndex = 27
+        Me.Button1.Text = "Reset"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Food_Item
         '
@@ -209,6 +221,7 @@ Partial Class Food_Item
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(975, 586)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.Label6)
@@ -254,4 +267,5 @@ Partial Class Food_Item
     Friend WithEvents Label6 As Label
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnUpdate As Button
+    Friend WithEvents Button1 As Button
 End Class
