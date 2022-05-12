@@ -23,8 +23,8 @@ Partial Class Admin_Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Admin_Login))
-        Me.txtAdminPpassword = New System.Windows.Forms.TextBox()
         Me.txtAdminUsername = New System.Windows.Forms.TextBox()
+        Me.txtAdminPasswrd = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -32,21 +32,22 @@ Partial Class Admin_Login
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'txtAdminPpassword
-        '
-        Me.txtAdminPpassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAdminPpassword.Location = New System.Drawing.Point(160, 248)
-        Me.txtAdminPpassword.Name = "txtAdminPpassword"
-        Me.txtAdminPpassword.Size = New System.Drawing.Size(189, 34)
-        Me.txtAdminPpassword.TabIndex = 7
-        '
         'txtAdminUsername
         '
         Me.txtAdminUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAdminUsername.Location = New System.Drawing.Point(160, 164)
+        Me.txtAdminUsername.Location = New System.Drawing.Point(145, 162)
         Me.txtAdminUsername.Name = "txtAdminUsername"
         Me.txtAdminUsername.Size = New System.Drawing.Size(189, 34)
-        Me.txtAdminUsername.TabIndex = 8
+        Me.txtAdminUsername.TabIndex = 7
+        '
+        'txtAdminPasswrd
+        '
+        Me.txtAdminPasswrd.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAdminPasswrd.Location = New System.Drawing.Point(145, 246)
+        Me.txtAdminPasswrd.Name = "txtAdminPasswrd"
+        Me.txtAdminPasswrd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtAdminPasswrd.Size = New System.Drawing.Size(189, 34)
+        Me.txtAdminPasswrd.TabIndex = 8
         '
         'Button2
         '
@@ -109,22 +110,23 @@ Partial Class Admin_Login
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(890, 484)
-        Me.Controls.Add(Me.txtAdminPpassword)
         Me.Controls.Add(Me.txtAdminUsername)
+        Me.Controls.Add(Me.txtAdminPasswrd)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Admin_Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin_Login"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents txtAdminPpassword As TextBox
     Friend WithEvents txtAdminUsername As TextBox
+    Friend WithEvents txtAdminPasswrd As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Label3 As Label

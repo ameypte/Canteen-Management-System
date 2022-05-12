@@ -169,6 +169,24 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="New_Customers.Designer.vb">
+      <DependentUpon>New_Customers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="New_Customers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show_Customers.Designer.vb">
+      <DependentUpon>Show_Customers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Show_Customers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Show_Orders.Designer.vb">
+      <DependentUpon>Show_Orders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Show_Orders.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Add_Customers.resx">
@@ -194,6 +212,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_Customers.resx">
+      <DependentUpon>New_Customers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_Customers.resx">
+      <DependentUpon>Show_Customers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Show_Orders.resx">
+      <DependentUpon>Show_Orders.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

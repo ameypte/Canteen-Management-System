@@ -28,17 +28,18 @@ Partial Class Food_Item
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox3 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox4 = New System.Windows.Forms.MaskedTextBox()
+        Me.txtItemId = New System.Windows.Forms.MaskedTextBox()
+        Me.txtFoodCategoryNo = New System.Windows.Forms.MaskedTextBox()
+        Me.txtUnitPrice = New System.Windows.Forms.MaskedTextBox()
+        Me.txtItemName = New System.Windows.Forms.MaskedTextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnSubmit = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.MaskedTextBox5 = New System.Windows.Forms.MaskedTextBox()
+        Me.txtSearch = New System.Windows.Forms.MaskedTextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -78,7 +79,7 @@ Partial Class Food_Item
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(433, 94)
+        Me.Label4.Location = New System.Drawing.Point(474, 85)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(118, 26)
         Me.Label4.TabIndex = 3
@@ -88,77 +89,70 @@ Partial Class Food_Item
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(392, 160)
+        Me.Label5.Location = New System.Drawing.Point(445, 151)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(200, 26)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Food Category No"
         '
-        'MaskedTextBox1
+        'txtItemId
         '
-        Me.MaskedTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(188, 94)
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(165, 30)
-        Me.MaskedTextBox1.TabIndex = 5
+        Me.txtItemId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtItemId.Location = New System.Drawing.Point(187, 94)
+        Me.txtItemId.Name = "txtItemId"
+        Me.txtItemId.Size = New System.Drawing.Size(165, 30)
+        Me.txtItemId.TabIndex = 5
         '
-        'MaskedTextBox2
+        'txtFoodCategoryNo
         '
-        Me.MaskedTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox2.Location = New System.Drawing.Point(621, 157)
-        Me.MaskedTextBox2.Name = "MaskedTextBox2"
-        Me.MaskedTextBox2.Size = New System.Drawing.Size(152, 30)
-        Me.MaskedTextBox2.TabIndex = 6
+        Me.txtFoodCategoryNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFoodCategoryNo.Location = New System.Drawing.Point(698, 151)
+        Me.txtFoodCategoryNo.Name = "txtFoodCategoryNo"
+        Me.txtFoodCategoryNo.Size = New System.Drawing.Size(152, 30)
+        Me.txtFoodCategoryNo.TabIndex = 6
         '
-        'MaskedTextBox3
+        'txtUnitPrice
         '
-        Me.MaskedTextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox3.Location = New System.Drawing.Point(621, 94)
-        Me.MaskedTextBox3.Name = "MaskedTextBox3"
-        Me.MaskedTextBox3.Size = New System.Drawing.Size(152, 30)
-        Me.MaskedTextBox3.TabIndex = 7
+        Me.txtUnitPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUnitPrice.Location = New System.Drawing.Point(698, 81)
+        Me.txtUnitPrice.Name = "txtUnitPrice"
+        Me.txtUnitPrice.Size = New System.Drawing.Size(152, 30)
+        Me.txtUnitPrice.TabIndex = 7
         '
-        'MaskedTextBox4
+        'txtItemName
         '
-        Me.MaskedTextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox4.Location = New System.Drawing.Point(188, 157)
-        Me.MaskedTextBox4.Name = "MaskedTextBox4"
-        Me.MaskedTextBox4.Size = New System.Drawing.Size(165, 30)
-        Me.MaskedTextBox4.TabIndex = 8
+        Me.txtItemName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtItemName.Location = New System.Drawing.Point(187, 151)
+        Me.txtItemName.Name = "txtItemName"
+        Me.txtItemName.Size = New System.Drawing.Size(165, 30)
+        Me.txtItemName.TabIndex = 8
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 254)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(951, 320)
         Me.DataGridView1.TabIndex = 9
         '
-        'Button1
+        'btnSubmit
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(818, 90)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(116, 39)
-        Me.Button1.TabIndex = 21
-        Me.Button1.Text = "Submit"
-        Me.ToolTip1.SetToolTip(Me.Button1, "Add ")
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'btnExit
-        '
-        Me.btnExit.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.ForeColor = System.Drawing.SystemColors.Highlight
-        Me.btnExit.Location = New System.Drawing.Point(820, 153)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(114, 39)
-        Me.btnExit.TabIndex = 20
-        Me.btnExit.Text = "Cancel"
-        Me.btnExit.UseVisualStyleBackColor = True
+        Me.btnSubmit.BackColor = System.Drawing.SystemColors.Highlight
+        Me.btnSubmit.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnSubmit.Location = New System.Drawing.Point(563, 202)
+        Me.btnSubmit.Name = "btnSubmit"
+        Me.btnSubmit.Size = New System.Drawing.Size(116, 39)
+        Me.btnSubmit.TabIndex = 21
+        Me.btnSubmit.Text = "Insert"
+        Me.ToolTip1.SetToolTip(Me.btnSubmit, "Insert")
+        Me.btnSubmit.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -169,23 +163,45 @@ Partial Class Food_Item
         Me.Panel1.Size = New System.Drawing.Size(975, 61)
         Me.Panel1.TabIndex = 22
         '
-        'MaskedTextBox5
+        'txtSearch
         '
-        Me.MaskedTextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox5.Location = New System.Drawing.Point(602, 218)
-        Me.MaskedTextBox5.Name = "MaskedTextBox5"
-        Me.MaskedTextBox5.Size = New System.Drawing.Size(313, 30)
-        Me.MaskedTextBox5.TabIndex = 23
+        Me.txtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearch.Location = New System.Drawing.Point(146, 211)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(313, 30)
+        Me.txtSearch.TabIndex = 23
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(492, 221)
+        Me.Label6.Location = New System.Drawing.Point(40, 211)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(91, 26)
         Me.Label6.TabIndex = 24
         Me.Label6.Text = "Search:"
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDelete.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btnDelete.Location = New System.Drawing.Point(833, 202)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(114, 39)
+        Me.btnDelete.TabIndex = 25
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnUpdate
+        '
+        Me.btnUpdate.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.btnUpdate.Location = New System.Drawing.Point(698, 202)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(114, 39)
+        Me.btnUpdate.TabIndex = 26
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'Food_Item
         '
@@ -193,16 +209,17 @@ Partial Class Food_Item
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(975, 586)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.MaskedTextBox5)
+        Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.MaskedTextBox4)
-        Me.Controls.Add(Me.MaskedTextBox3)
-        Me.Controls.Add(Me.MaskedTextBox2)
-        Me.Controls.Add(Me.MaskedTextBox1)
+        Me.Controls.Add(Me.txtItemName)
+        Me.Controls.Add(Me.txtUnitPrice)
+        Me.Controls.Add(Me.txtFoodCategoryNo)
+        Me.Controls.Add(Me.txtItemId)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -225,15 +242,16 @@ Partial Class Food_Item
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
-    Friend WithEvents MaskedTextBox2 As MaskedTextBox
-    Friend WithEvents MaskedTextBox3 As MaskedTextBox
-    Friend WithEvents MaskedTextBox4 As MaskedTextBox
+    Friend WithEvents txtItemId As MaskedTextBox
+    Friend WithEvents txtFoodCategoryNo As MaskedTextBox
+    Friend WithEvents txtUnitPrice As MaskedTextBox
+    Friend WithEvents txtItemName As MaskedTextBox
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents btnExit As Button
+    Friend WithEvents btnSubmit As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents ToolTip1 As ToolTip
-    Friend WithEvents MaskedTextBox5 As MaskedTextBox
+    Friend WithEvents txtSearch As MaskedTextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnUpdate As Button
 End Class

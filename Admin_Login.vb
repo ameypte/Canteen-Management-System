@@ -12,9 +12,14 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If txtAdminPpassword.Text = "admin" And txtAdminPpassword.Text = "admin" Then
+        If txtAdminUsername.Text = "admin" And txtAdminUsername.Text = "admin" Then
+            Admin_Home.Show()
             MessageBox.Show("login successfully!")
-            Food_Item.Show()
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        txtAdminPasswrd.Text = ""
+        txtAdminUsername.Text = ""
     End Sub
 End Class

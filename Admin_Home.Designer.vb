@@ -34,9 +34,9 @@ Partial Class Admin_Home
         Me.Button2.BackColor = System.Drawing.SystemColors.Highlight
         Me.Button2.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button2.Location = New System.Drawing.Point(524, 78)
+        Me.Button2.Location = New System.Drawing.Point(525, 79)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(196, 40)
+        Me.Button2.Size = New System.Drawing.Size(211, 40)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Food Items"
         Me.Button2.UseVisualStyleBackColor = False
@@ -48,7 +48,7 @@ Partial Class Admin_Home
         Me.Button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button3.Location = New System.Drawing.Point(525, 162)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(195, 44)
+        Me.Button3.Size = New System.Drawing.Size(211, 54)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Show Customers "
         Me.Button3.UseVisualStyleBackColor = False
@@ -58,9 +58,9 @@ Partial Class Admin_Home
         Me.Button4.BackColor = System.Drawing.SystemColors.Highlight
         Me.Button4.Font = New System.Drawing.Font("Times New Roman", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button4.Location = New System.Drawing.Point(525, 247)
+        Me.Button4.Location = New System.Drawing.Point(525, 250)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(195, 44)
+        Me.Button4.Size = New System.Drawing.Size(211, 44)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "Show Orders"
         Me.Button4.UseVisualStyleBackColor = False
@@ -89,7 +89,9 @@ Partial Class Admin_Home
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Admin_Home"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin_Home"
         Me.ResumeLayout(False)
 
