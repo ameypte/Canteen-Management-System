@@ -50,4 +50,8 @@ Public Class Show_Customers
     Private Sub Show_Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         updateTable()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        updateTable()
+    End Sub
 End Class

@@ -12,9 +12,12 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If txtAdminUsername.Text = "admin" And txtAdminUsername.Text = "admin" Then
+        If txtAdminUsername.Text = "admin" And txtAdminPasswrd.Text = "admin" Then
+            Me.Close()
             Admin_Home.Show()
             MessageBox.Show("login successfully!")
+        Else
+            MessageBox.Show("Incorrect Username or Password!!")
         End If
     End Sub
 

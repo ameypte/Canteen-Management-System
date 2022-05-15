@@ -175,6 +175,12 @@
     <Compile Include="New_Customers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Place_order.Designer.vb">
+      <DependentUpon>Place_order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Place_order.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Show_Customers.Designer.vb">
       <DependentUpon>Show_Customers.vb</DependentUpon>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="New_Customers.resx">
       <DependentUpon>New_Customers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Place_order.resx">
+      <DependentUpon>Place_order.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Show_Customers.resx">
       <DependentUpon>Show_Customers.vb</DependentUpon>

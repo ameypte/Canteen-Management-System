@@ -12,6 +12,8 @@ Public Class Customer_login
     Dim password As String = "amey"
     Dim database As String = "canteen_management_system"
 
+    Public logedCustomerId As Integer
+
     Private Sub Customer_login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -29,17 +31,18 @@ Public Class Customer_login
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+        txtCustomerUsername.Text = ""
+        txtCustomerPassword.Text = ""
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         SqlConn.ConnectionString = "server=" + server + ";" + "user id=" + username + ";" _
         + "password=" + password + ";" + "database=" + database
 
         SqlConn.Open()
 
         SqlCmd.Connection = SqlConn
-        SqlQuery = "SELECT * FROM canteen_management_system.login_info WHERE username = @username AND password = @password"
+        SqlQuery = "SELECT customer_id FROM canteen_management_system.login_info WHERE username = @username AND password = @password"
 
         SqlCmd = New MySqlCommand(SqlQuery, SqlConn)
 
@@ -52,9 +55,12 @@ Public Class Customer_login
         If SqlDt.Rows.Count <= 0 Then
             MessageBox.Show("Incorrect Username or Password!")
         Else
+            logedCustomerId = CInt(SqlCmd.ExecuteScalar)
             MessageBox.Show("Login Successfully!!")
+            Place_order.Show()
         End If
         SqlCmd.ExecuteNonQuery()
         SqlConn.Close()
+        Me.Close()
     End Sub
 End Class

@@ -13,8 +13,6 @@ Public Class Food_Item
 
     Dim SqlQuery As String
 
-    Private bitmap As Bitmap
-
     Private Sub updateTable()
         SqlConn.ConnectionString = "server=" + server + ";" + "user id=" + username + ";" _
         + "password=" + password + ";" + "database=" + database
@@ -136,7 +134,6 @@ Public Class Food_Item
                 Dim dv As DataView
                 dv = SqlDt.DefaultView
                 dv.RowFilter = String.Format("item_name Like '%{0}%'", txtSearch.Text)
-                dv.RowFilter = String.Format("food_category Like '%{0}%'", txtSearch.Text)
                 DataGridView1.DataSource = dv.ToTable()
             End If
         Catch ex As Exception
